@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
@@ -16,8 +17,8 @@ import { SwiperOptions } from 'swiper/types';
 export class App {
   protected readonly title = signal('watches-cost-finder');
 
-  ngOnInit() {
-    new Swiper('.swiper', {
+  ngAfterViewInit() {
+    new Swiper('.container .swiper-container .swiper', {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
