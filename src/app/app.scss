@@ -1,0 +1,127 @@
+.navbar {
+    background-color: var(--main);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--main);
+  font-size: 28px;
+}
+
+header p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.swiper {
+    height: 300px;
+}
+
+.swiper-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 400px;
+        height: auto;
+    }
+}
+
+.form-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.form-section h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form-checks {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-checks label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+button {
+  background: var(--main);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004ab3;
+}
+
+.result-box {
+  margin-top: 32px;
+  padding: 20px;
+  background: #eaf1ff;
+  border-left: 4px solid var(--main);
+  border-radius: 6px;
+}
+
+.result-box p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+footer {
+  margin-top: 48px;
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
