@@ -1,5 +1,16 @@
 .navbar {
     background-color: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      max-width: 800px;
+      width: 100%;
+    }
+}
+
+.logo-img {
+  width:175px;
 }
 
 .container {
@@ -28,6 +39,9 @@ header p {
 
 .swiper {
     height: 300px;
+    @media screen and (max-width: 600px) {
+          height: 400px;
+        }
 }
 
 .swiper-header {
@@ -40,8 +54,12 @@ header p {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 600px) {
+          display: flex;
+          flex-direction: column;;
+        }
     img{
-        width: 400px;
+        width: 300px;
         height: auto;
         @media screen and (max-width: 600px) {
           width: 200px;
