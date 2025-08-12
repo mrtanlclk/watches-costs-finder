@@ -141,41 +141,55 @@
   </section>
   <section class="form-section">
     <h2>Saatini Değerle</h2>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="fullName">İsim</label>
+        <input type="text" id="fullName" formControlName="fullName" placeholder="Örn: Mert Çelik" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input type="text" id="phone" formControlName="phone" placeholder="Örn: 05555 456 78 90" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" placeholder="Örn: mert@ornek.com" required />
+      </div>
       <div class="form-group">
         <label for="brand">Marka</label>
-        <input type="text" id="brand" placeholder="Örn: Rolex" required />
+        <input type="text" id="brand" formControlName="brand" placeholder="Örn: Rolex" required />
       </div>
       <div class="form-group">
         <label for="model">Model</label>
-        <input type="text" id="model" placeholder="Örn: Submariner" required />
+        <input type="text" id="model" formControlName="model" placeholder="Örn: Submariner" required />
       </div>
       <div class="form-group">
         <label for="year">Üretim Yılı</label>
         <input
           type="number"
           id="year"
-          min="1950"
-          max="2025"
+          formControlName="year"
           placeholder="Örn: 2018"
         />
       </div>
       <div class="form-group">
         <label for="condition">Kondisyon</label>
-        <select id="condition">
+        <select id="condition" formControlName="condition">
           <option>Seçiniz</option>
-          <option>Mükemmel</option>
-          <option>İyi</option>
-          <option>Orta</option>
-          <option>Kötü</option>
+          <option value="Mukemmel">Mükemmel</option>
+          <option value="Iyi">İyi</option>
+          <option value="Orta">Orta</option>
+          <option value="Kotu">Kötü</option>
         </select>
       </div>
       <div class="form-checks">
-        <label><input type="checkbox" /> Kutu var</label>
-        <label><input type="checkbox" /> Belgeler var</label>
-        <label><input type="checkbox" /> Limitli Seri</label>
-        <label><input type="checkbox" /> Servis geçmişi var</label>
+        <label><input type="checkbox" formControlName="box" /> Kutu var</label>
+        <label><input type="checkbox" formControlName="papers" /> Belgeler var</label>
+        <label><input type="checkbox" formControlName="limitedEdition" /> Limitli Seri</label>
+        <label><input type="checkbox" formControlName="serviceHistory" /> Servis geçmişi var</label>
       </div>
+      <!-- <div class="form-group">
+        <input id="inputFile" type="file" name="my_file" formControlName="file">
+      </div> -->
       <button type="submit">Değerle</button>
     </form>
   </section>

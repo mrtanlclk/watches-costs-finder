@@ -41,6 +41,7 @@ header p {
 
 .swiper {
   height: 300px;
+  margin-bottom: 3rem;
 
   @media screen and (max-width: 600px) {
     height: 400px;
@@ -100,6 +101,7 @@ label {
 
 input[type="text"],
 input[type="number"],
+input[type="email"],
 select {
   width: 100%;
   padding: 10px;
