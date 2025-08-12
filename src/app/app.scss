@@ -43,6 +43,9 @@ header p {
     img{
         width: 400px;
         height: auto;
+        @media screen and (max-width: 600px) {
+          width: 200px;
+        }
     }
 }
 
