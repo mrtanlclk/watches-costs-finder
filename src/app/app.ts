@@ -65,13 +65,13 @@ export class App {
         .then(
           () => {
             console.log('SUCCESS!');
+            alert('Form başarıyla gönderildi!');
+            this.form.reset();
           },
           (error) => {
             console.log('FAILED...', error as EmailJSResponseStatus);
           }
         );
-      alert('Form başarıyla gönderildi!');
-      this.form.reset();
     }
   }
 }
