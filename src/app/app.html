@@ -19,10 +19,10 @@
   <div class="container-top">
     <div class="text-end">
       <h1 style="font-size: 40px">Saatini</h1>
-      <h1 style="font-size: 40px"> Değerle</h1>
+      <h1 style="font-size: 40px">Değerle</h1>
 
       <h4>
-        <p style="font-size: 26px">Saatinizi </p>
+        <p style="font-size: 26px">Saatinizi</p>
         <p style="font-size: 26px">satmanın en</p>
         <p style="font-size: 26px">kazançlı yolu!</p>
         <p style="font-size: 26px">Değerle.</p>
@@ -33,128 +33,6 @@
 </header>
 
 <main class="main">
-  <section class="swiper-container">
-    <div class="swiper-header">
-      <h1>Markalarımız</h1>
-    </div>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="assets/rolex.png" alt="rolex" />
-          <img src="assets/rolex-watch.png" alt="rolex-watch" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/cartier.png" alt="cartier" />
-          <img src="assets/cartier-watch.png" alt="cartier-watch" />
-        </div>
-
-        <div class="swiper-slide">
-          <img src="assets/patek-philippe.png" alt="patek-philippe" />
-          <img
-            src="assets/patek-philippe-watch.png"
-            alt="patek-philippe-watch"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/F._P._Journe_Logo.svg.png" alt="F. P. Journe" />
-          <img src="assets/f-p-journe-watch.png" alt="f-p-journe-watch" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/Audemars_Piguet_logo.png" alt="Audemars Piguet" />
-          <img
-            src="assets/audemars-piguet-watch.png"
-            alt="audemars-piguet-watch"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/richard-mille-seeklogo.png" alt="Richard Mille" />
-          <img src="assets/richard-mille-watch.png" alt="richard-mille-watch" />
-        </div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-  </section>
-  <section class="icons">
-    <div class="icon-row" role="list" aria-label="Üç ikonlu işlem adımları">
-      <!-- 1 -->
-      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 1">
-        <div class="icon" aria-hidden="true">
-          <!-- form / bilgi ikonu -->
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            style="color: #2563eb"
-          >
-            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-            <path d="M8 8h8M8 12h5"></path>
-          </svg>
-        </div>
-        <div class="badge badge-pill badge-success">Adım 1</div>
-        <div class="desc">
-          Saat’in bilgilerini sisteme girerek değerini belirleyin!
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 2">
-        <div class="icon" aria-hidden="true">
-          <!-- onay / teklif ikonu -->
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            style="color: #10b981"
-          >
-            <path
-              d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"
-            ></path>
-            <path d="M16 6l-6 6"></path>
-            <path d="M10 6h6v6"></path>
-          </svg>
-        </div>
-        <div class="badge badge-pill badge-success">Adım 2</div>
-        <div class="desc">Expertiz Sonrası En İyi Teklifi Alın!</div>
-      </div>
-
-      <!-- 3 -->
-      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 3">
-        <div class="icon" aria-hidden="true">
-          <!-- ödeme / güvenlik ikonu -->
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            style="color: #f59e0b"
-          >
-            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
-            <path d="M16 3v4"></path>
-            <circle cx="12" cy="14" r="2"></circle>
-          </svg>
-        </div>
-        <div class="badge badge-pill badge-success">Adım 3</div>
-        <div class="desc">Güvenli Ödeme Sistemi İle Satışınızı Tamamlayın!</div>
-      </div>
-    </div>
-  </section>
-
   <section class="form-section">
     <h2>Saatini Değerle</h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
@@ -247,6 +125,128 @@
       </div> -->
       <button type="submit">Değerle</button>
     </form>
+  </section>
+
+  <section class="icons">
+    <div class="icon-row" role="list" aria-label="Üç ikonlu işlem adımları">
+      <!-- 1 -->
+      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 1">
+        <div class="icon" aria-hidden="true">
+          <!-- form / bilgi ikonu -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: #2563eb"
+          >
+            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+            <path d="M8 8h8M8 12h5"></path>
+          </svg>
+        </div>
+        <div class="badge badge-pill badge-success">Adım 1</div>
+        <div class="desc">
+          Saat’in bilgilerini sisteme girerek değerini belirleyin!
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 2">
+        <div class="icon" aria-hidden="true">
+          <!-- onay / teklif ikonu -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: #10b981"
+          >
+            <path
+              d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6"
+            ></path>
+            <path d="M16 6l-6 6"></path>
+            <path d="M10 6h6v6"></path>
+          </svg>
+        </div>
+        <div class="badge badge-pill badge-success">Adım 2</div>
+        <div class="desc">Expertiz Sonrası En İyi Teklifi Alın!</div>
+      </div>
+
+      <!-- 3 -->
+      <div class="icon-card" role="listitem" tabindex="0" aria-label="Adım 3">
+        <div class="icon" aria-hidden="true">
+          <!-- ödeme / güvenlik ikonu -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="color: #f59e0b"
+          >
+            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+            <path d="M16 3v4"></path>
+            <circle cx="12" cy="14" r="2"></circle>
+          </svg>
+        </div>
+        <div class="badge badge-pill badge-success">Adım 3</div>
+        <div class="desc">Güvenli Ödeme Sistemi İle Satışınızı Tamamlayın!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="swiper-container">
+    <div class="swiper-header">
+      <h1>Markalarımız</h1>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="assets/rolex.png" alt="rolex" />
+          <img src="assets/rolex-watch.png" alt="rolex-watch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/serpenti.png" alt="serpenti" />
+          <img src="assets/serpenti-watch.png" alt="serpenti-watch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/patek-philippe.png" alt="patek-philippe" />
+          <img
+            src="assets/patek-philippe-watch.png"
+            alt="patek-philippe-watch"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/F._P._Journe_Logo.svg.png" alt="F. P. Journe" />
+          <img src="assets/f-p-journe-watch.png" alt="f-p-journe-watch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Audemars_Piguet_logo.png" alt="Audemars Piguet" />
+          <img
+            src="assets/audemars-piguet-watch.png"
+            alt="audemars-piguet-watch"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/richard-mille-seeklogo.png" alt="Richard Mille" />
+          <img src="assets/richard-mille-watch.png" alt="richard-mille-watch" />
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </section>
 </main>
 
