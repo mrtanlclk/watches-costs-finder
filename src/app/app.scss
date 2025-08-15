@@ -4,18 +4,74 @@
   align-items: center;
   justify-content: center;
 
-  div {
+  .container-nav {
     max-width: 800px;
     width: 100%;
     margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
+
+.watch-logos-web {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.watch-logos-mobile {
+  display: none;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .watch-logos-web {
+    display: none;
+  }
+
+  .watch-logos-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+}
+
+.watch-logos-web {
+  .watch-img:nth-child(2) {
+    height: 8px;
+
+    @media screen and (max-width: 600px) {
+      height: 5px;
+    }
+  }
+}
+
+
+.watch-img {
+  height: 30px;
+
+  &.fp {
+    height: 30px;
+  }
+
+  &.rm {
+    height: 5px;
+  }
+
+  &.philippe {
+    height: 40px;
+  }
+}
+
+
 
 .logo-img {
   width: 175px;
 }
 
-.container-top, .main, .container-footer {
+.container-top,
+.main,
+.container-footer {
   max-width: 800px;
   margin: 0 auto;
   padding: 24px;
@@ -26,7 +82,7 @@
   background-image: url('../assets/bg-man-2.png');
   background-repeat: no-repeat;
   background-position: left;
-  background-size:contain;
+  background-size: contain;
 }
 
 header {
@@ -38,19 +94,21 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  .header-web{
+  .header-web {
     display: none;
   }
-  .header-mobile{
+
+  .header-mobile {
     display: block;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .header-web{
+  .header-web {
     display: block;
   }
-  .header-mobile{
+
+  .header-mobile {
     display: none;
   }
 }
@@ -104,7 +162,8 @@ header p {
   }
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: #a31621;
 
   &:hover {
@@ -118,6 +177,7 @@ header p {
   border-radius: 8px;
   margin-top: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
   h2 {
     color: #1f7a8c;
   }
@@ -225,65 +285,82 @@ footer {
 }
 
 .icon-row {
-      display: flex;
-      gap: 18px;
-      justify-content: center;
-      align-items: stretch;
-      max-width: 1000px;
-      margin: 5rem auto;
-      @media (max-width: 600px) {
-        flex-wrap: wrap;
-        
-      }
-    }
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 5rem auto;
 
-    .icon-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 20px;
-      width: 320px;
-      box-shadow: 0 8px 22px rgba(2,6,23,0.06);
-      text-align: center;
-      transition: transform .18s ease, box-shadow .18s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-    .icon-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(2,6,23,0.10); }
-    .icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(180deg, rgba(37,99,235,0.10), rgba(37,99,235,0.03));
-      margin-bottom: 0.5rem;
-    }
-    .icon svg { width: 34px; height: 34px; display:block; }
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
 
-    .desc {
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.45;
-      white-space: pre-line; /* satır sonlarını korur */
-    }
+  }
+}
 
-    @media (max-width: 980px){
-      .icon-card{ width: calc(50% - 16px); }
-    }
-    @media (max-width: 520px){
-      .icon-card{ width: 100%; }
-    }
+.icon-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 8px 22px rgba(2, 6, 23, 0.06);
+  text-align: center;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 
-    .badge {
-      background-color: #db222a;
-      color: var(--light-bg);
-    }
+.icon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.10);
+}
 
-    .logo-watch-img {
-      width: 40px;
-      height: auto;
-      margin-left: 8px;
-    }
+.icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.10), rgba(37, 99, 235, 0.03));
+  margin-bottom: 0.5rem;
+}
+
+.icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+.desc {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.45;
+  white-space: pre-line;
+  /* satır sonlarını korur */
+}
+
+@media (max-width: 980px) {
+  .icon-card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 520px) {
+  .icon-card {
+    width: 100%;
+  }
+}
+
+.badge {
+  background-color: #db222a;
+  color: var(--light-bg);
+}
+
+.logo-watch-img {
+  width: 40px;
+  height: auto;
+  margin-left: 8px;
+}

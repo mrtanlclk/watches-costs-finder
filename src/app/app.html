@@ -1,6 +1,46 @@
 <nav class="navbar navbar-dark">
-  <div>
+  <div class="container-nav">
     <img class="logo-img" src="assets/logo-png.png" alt="logo" />
+    <div class="watch-logos-web">
+      <img class="watch-img" src="assets/rolex.png" alt="rolex" />
+      <img
+        class="watch-img"
+        src="assets/richard-mille-seeklogo.png"
+        alt="Richard Mille"
+      />
+      <img
+        class="watch-img philippe"
+        src="assets/patek-philippe.png"
+        alt="patek-philippe"
+      />
+      <img
+        class="watch-img"
+        src="assets/F._P._Journe_Logo.svg.png"
+        alt="F. P. Journe"
+      />
+    </div>
+    <div class="watch-logos-mobile">
+      <div class="d-flex gap-3 align-items-center">
+        <img class="watch-img" src="assets/rolex.png" alt="rolex" />
+        <img
+          class="watch-img rm"
+          src="assets/richard-mille-seeklogo.png"
+          alt="Richard Mille"
+        />
+      </div>
+      <div class="d-flex gap-3 align-items-center">
+        <img
+          class="watch-img"
+          src="assets/patek-philippe.png"
+          alt="patek-philippe"
+        />
+        <img
+          class="watch-img fp"
+          src="assets/F._P._Journe_Logo.svg.png"
+          alt="F. P. Journe"
+        />
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -34,8 +74,13 @@
 
 <main class="main">
   <section class="form-section">
-    <h2 class="d-flex align-items-center">Saatini Değerle
-      <img class="logo-watch-img" src="assets/logo-watch-2.png" alt="logo-watch">
+    <h2 class="d-flex align-items-center">
+      Saatini Değerle
+      <img
+        class="logo-watch-img"
+        src="assets/logo-watch-2.png"
+        alt="logo-watch"
+      />
     </h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
       <div class="form-group">
