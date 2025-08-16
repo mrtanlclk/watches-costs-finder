@@ -82,14 +82,14 @@
         alt="logo-watch"
       />
     </h2>
-    <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="fullName">İsim</label>
         <input
           type="text"
           id="fullName"
           formControlName="fullName"
-          placeholder="Örn: Mert Çelik"
+          placeholder="Örn: Mert Anıl Çelik"
           required
         />
       </div>
@@ -134,11 +134,11 @@
         />
       </div>
       <div class="form-group">
-        <label for="year">Üretim Yılı</label>
+        <label for="productionYear">Üretim Yılı</label>
         <input
           type="number"
-          id="year"
-          formControlName="year"
+          id="productionYear"
+          formControlName="productionYear"
           placeholder="Örn: 2018"
         />
       </div>
@@ -153,24 +153,46 @@
         </select>
       </div>
       <div class="form-checks">
-        <label><input type="checkbox" formControlName="box" /> Kutu var</label>
         <label
-          ><input type="checkbox" formControlName="papers" /> Belgeler
+          ><input type="checkbox" formControlName="hasBox" /> Kutu var</label
+        >
+        <label
+          ><input type="checkbox" formControlName="hasPapers" /> Belgeler
           var</label
         >
         <label
-          ><input type="checkbox" formControlName="limitedEdition" /> Limitli
+          ><input type="checkbox" formControlName="isLimited" /> Limitli
           Seri</label
         >
         <label
-          ><input type="checkbox" formControlName="serviceHistory" /> Servis
+          ><input type="checkbox" formControlName="hasServiceHistory" /> Servis
           geçmişi var</label
         >
+      </div>
+      <div class="form-group">
+        <label for="note">Not</label>
+        <input
+          type="text"
+          id="note"
+          formControlName="note"
+          placeholder="Not"
+        />
+      </div>
+      <div class="form-group">
+        <label for="photos">Fotoğraflar</label>
+        <input
+          type="file"
+          (change)="onFileSelected($event)"
+          multiple
+          accept="image/*"
+        />
+        <p class="mb-0" *ngFor="let file of selectedFiles">{{ file.name }}</p>
       </div>
       <!-- <div class="form-group">
         <input id="inputFile" type="file" name="my_file" formControlName="file">
       </div> -->
-      <button type="submit">Değerle</button>
+      <button type="submit" *ngIf="!hasFormSent">Değerle</button>
+      <button [disabled]="true" *ngIf="hasFormSent">Gönderiliyor...</button>
     </form>
   </section>
 
@@ -303,9 +325,9 @@
       <img src="assets/logo-png.png" alt="loho" />
     </div>
     <div class="footer-content">
-      <p>Adres: Örnek Mah. No:1, İstanbul</p>
-      <p>Telefon: (0212) 123 45 67</p>
-      <p>Email: info@saatdegerle.com</p>
+      <!-- <p>Adres: Örnek Mah. No:1, İstanbul</p> -->
+      <p>Telefon: +90 543 442 13 49</p>
+      <p>Email: saatinidegerle@gmail.com</p>
     </div>
   </div>
 
