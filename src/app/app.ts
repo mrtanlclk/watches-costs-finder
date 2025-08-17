@@ -5,10 +5,10 @@ import { RouterOutlet } from '@angular/router';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { AppService } from './app.service';
+import { MatExpansionModule } from '@angular/material/expansion';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ReactiveFormsModule, CommonModule
-  ],
+  imports: [RouterOutlet, ReactiveFormsModule, CommonModule, MatExpansionModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -18,6 +18,7 @@ export class App {
   form: FormGroup;
   selectedFiles: File[] = [];
   hasFormSent = false;
+  readonly panelOpenState = signal(false);
 
   constructor(
     private formBuilder: FormBuilder,
@@ -61,7 +62,6 @@ export class App {
     const input = event.target as HTMLInputElement;
     if (input.files) {
       this.selectedFiles.push(...Array.from(input.files)); // FileList -> Array
-      console.log(this.selectedFiles);
     }
   }
 

@@ -171,12 +171,7 @@
       </div>
       <div class="form-group">
         <label for="note">Not</label>
-        <input
-          type="text"
-          id="note"
-          formControlName="note"
-          placeholder="Not"
-        />
+        <input type="text" id="note" formControlName="note" placeholder="Not" />
       </div>
       <div class="form-group">
         <label for="photos">Fotoğraflar</label>
@@ -317,6 +312,85 @@
       <div class="swiper-button-next"></div>
     </div>
   </section>
+
+  <section class="accordion">
+    <mat-accordion>
+      <mat-expansion-panel
+        (opened)="panelOpenState.set(true)"
+        (closed)="panelOpenState.set(false)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Hangi Marka Saatleri alıyorsunuz ?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Genellikle İsviçre menşeli erkek kol saatleri alıyoruz, ancak diğer
+          ülkelerde üretilen ve değeri olan özel modeller de ilgimizi çekiyor.
+          İnternet sitemizdeki marka listemiz size fikir verebilir. Saatiniz
+          listedeki markalar arasında olmasa bile, fotoğraflarını bizimle
+          paylaşırsanız değerlendirme yapabiliriz.
+        </p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel
+        (opened)="panelOpenState.set(true)"
+        (closed)="panelOpenState.set(false)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Fotoğraf gönderirken nelere dikkat etmeliyim ?</mat-panel-title
+          >
+        </mat-expansion-panel-header>
+        <p>
+          Göndereceğiniz fotoğrafların net olması önemlidir. Saatin ön, arka
+          kapağı, tepe kısmı, toka ve kordon bölümleri detaylı olarak
+          görünmelidir. Yazılar ve işaretler net bir şekilde okunabilmelidir.
+        </p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel
+        (opened)="panelOpenState.set(true)"
+        (closed)="panelOpenState.set(false)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Hakkımızda</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          30 yıldır lüks saat sektörünün güvenilir markasıyız. Saat Değerle
+          olarak, ikinci el lüks saat pazarında alım-satım ve bakım-onarım
+          hizmetlerinde sektördeki deneyimimiz ve güçlü iş ortaklıklarımızla
+          müşterilerimize güvenilir çözümler sunmayı amaçlıyoruz. Uzman
+          ekibimizin ekspertiz desteğiyle, saatlerinizi en iyi fiyat
+          garantisiyle değerlendiriyor; satış, takas ya da bakım seçenekleriyle
+          müşteri memnuniyetini en üst seviyede tutuyoruz. Saatini
+          değerlendirmek isteyen herkese alternatif çözümler sunarak
+          beklentileri aşmayı hedefliyoruz.
+        </p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel
+        (opened)="panelOpenState.set(true)"
+        (closed)="panelOpenState.set(false)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Saat Expertiz Hizmetleri</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          Saat Ekspertizi Nedir? <br>Saat ekspertizi, özellikle lüks ve koleksiyon
+          değeri taşıyan kol saatlerinin gerçek piyasa değerini belirlemek için
+          gerçekleştirilen profesyonel bir inceleme sürecidir. Bu işlemde saatin
+          markası, modeli, kondisyonu, kullanılan malzemeler, mekanizmasının
+          durumu ve varsa kutu, sertifika gibi aksesuarları detaylı bir şekilde
+          analiz edilir. Ekspertiz süreci, saatinize en uygun fiyatın
+          belirlenmesi ve doğru değerinin ortaya çıkarılması açısından kritik
+          öneme sahiptir. Saatimi değerle olarak, sektördeki deneyimimiz ve
+          uzman ekibimizle saatinizi en yüksek değerden alıcı bulacak şekilde
+          değerlendirme imkanı sunuyor, satmak, takas yapmak veya uluslararası
+          pazarlarda konsinye satışa çıkarmak isteyen müşterilerimize güvenilir
+          bir hizmet sağlıyoruz.
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 </main>
 
 <footer>
@@ -325,8 +399,8 @@
       <img src="assets/logo-png.png" alt="loho" />
     </div>
     <div class="footer-content">
-      <!-- <p>Adres: Örnek Mah. No:1, İstanbul</p> -->
-      <p>Telefon: +90 543 442 13 49</p>
+      <p>Adres: Sapphire Levent İstanbul</p>
+      <p>Telefon: +90 (531) 820 93 63</p>
       <p>Email: saatinidegerle@gmail.com</p>
     </div>
   </div>

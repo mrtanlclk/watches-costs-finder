@@ -364,3 +364,17 @@ footer {
   height: auto;
   margin-left: 8px;
 }
+
+
+::ng-deep .mat-expansion-panel-header {
+  background: var(--bg) !important;
+  padding: 0.5rem !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  p {
+    margin-top: 1rem !important;
+  }
+}
