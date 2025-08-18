@@ -84,7 +84,7 @@
     </h2>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="fullName">İsim</label>
+        <label for="fullName">İsim<span class="text-danger">*</span></label>
         <input
           type="text"
           id="fullName"
@@ -94,7 +94,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="phone">Telefon</label>
+        <label for="phone">Telefon<span class="text-danger">*</span></label>
         <input
           type="text"
           id="phone"
@@ -104,7 +104,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">Email<span class="text-danger">*</span></label>
         <input
           type="email"
           id="email"
@@ -114,7 +114,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="brand">Marka</label>
+        <label for="brand">Marka<span class="text-danger">*</span></label>
         <input
           type="text"
           id="brand"
@@ -124,7 +124,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="model">Model</label>
+        <label for="model">Model<span class="text-danger">*</span></label>
         <input
           type="text"
           id="model"
@@ -134,7 +134,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="productionYear">Üretim Yılı</label>
+        <label for="productionYear">Üretim Yılı<span class="text-danger">*</span></label>
         <input
           type="number"
           id="productionYear"
@@ -143,7 +143,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="condition">Kondisyon</label>
+        <label for="condition">Kondisyon<span class="text-danger">*</span></label>
         <select id="condition" formControlName="condition">
           <option>Seçiniz</option>
           <option value="Mukemmel">Mükemmel</option>
@@ -174,7 +174,7 @@
         <input type="text" id="note" formControlName="note" placeholder="Not" />
       </div>
       <div class="form-group">
-        <label for="photos">Fotoğraflar</label>
+        <label for="photos">Fotoğraflar<span class="text-danger">*</span></label>
         <input
           type="file"
           (change)="onFileSelected($event)"
@@ -188,6 +188,7 @@
       </div> -->
       <button type="submit" *ngIf="!hasFormSent">Değerle</button>
       <button [disabled]="true" *ngIf="hasFormSent">Gönderiliyor...</button>
+      <p><span class="text-danger">*</span> işaretliler zorunlu alanlar</p>
     </form>
   </section>
 
