@@ -5,11 +5,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AppService {
-  apiUrl = 'http://45.94.4.245:5294/EmailSender/send';
+  apiUrl = 'https://api.satinidegerle.com/EmailSender/send';
+  apiUrlW = 'https://api.satinidegerle.com/WeatherForecast';
 
   constructor(private http: HttpClient) {}
 
   sendForm(formData: FormData) {
     return this.http.post(`${this.apiUrl}`, formData);
+  }
+
+  getWeather() {
+    return this.http.get(`${this.apiUrlW}`);
   }
 }

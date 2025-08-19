@@ -66,9 +66,9 @@ export class App {
   }
 
   onSubmit() {
-    if (this.form.invalid) {
-      return;
-    }
+    // if (this.form.invalid) {
+    //   return;
+    // }
 
     this.hasFormSent = true;
 
@@ -98,8 +98,8 @@ export class App {
         this.hasFormSent = false;
       },
       error: (error) => {
-        console.error('Error submitting form:', error);
-        alert('Form gönderilirken bir hata oluştu! \n' + error);
+        // console.error('Error submitting form:', error);
+        // alert('Form gönderilirken bir hata oluştu! \n' + error);
         this.hasFormSent = false;
       },
     });
@@ -108,5 +108,16 @@ export class App {
     // for (const pair of formData.entries()) {
     //   console.log(pair[0], pair[1]);
     // }
+  }
+
+  clickWeather(){
+    this.appService.getWeather().subscribe({
+      next: (response) => {
+        console.log('Weather data retrieved successfully:', response);
+      },
+      error: (error) => {
+        console.error('Error retrieving weather data:', error);
+      },
+    });
   }
 }
