@@ -109,15 +109,4 @@ export class App {
     //   console.log(pair[0], pair[1]);
     // }
   }
-
-  clickWeather(){
-    this.appService.getWeather().subscribe({
-      next: (response) => {
-        console.log('Weather data retrieved successfully:', response);
-      },
-      error: (error) => {
-        console.error('Error retrieving weather data:', error);
-      },
-    });
-  }
 }
