@@ -66,9 +66,9 @@ export class App {
   }
 
   onSubmit() {
-    // if (this.form.invalid) {
-    //   return;
-    // }
+    if (this.form.invalid) {
+      return;
+    }
 
     this.hasFormSent = true;
 
