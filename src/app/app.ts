@@ -95,11 +95,12 @@ export class App {
         console.log('Form submitted successfully:', response);
         alert('Form başarıyla gönderildi!');
         this.form.reset();
+        this.selectedFiles = [];
         this.hasFormSent = false;
       },
       error: (error) => {
-        // console.error('Error submitting form:', error);
-        // alert('Form gönderilirken bir hata oluştu! \n' + error);
+        console.error('Error submitting form:', error);
+        alert('Form gönderilirken bir hata oluştu! \n' + error);
         this.hasFormSent = false;
       },
     });
